@@ -1,0 +1,6 @@
+- name: Enable and start cups service.
+  systemd:
+    enabled: true
+    state: started
+
+      # TODO: start ntpd service. Install chrony/openntp?
