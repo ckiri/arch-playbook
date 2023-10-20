@@ -1,7 +1,7 @@
 - name: Ensure services are enabled.
   ansible.builtin.service:
     become: yes
-    name: {{ item }} 
+    name: "{{ item }}"
     enabled: true
     loop:
       - cups.service

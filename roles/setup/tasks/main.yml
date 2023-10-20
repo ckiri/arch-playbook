@@ -3,16 +3,18 @@
     repo: https://github.com/ckiri/dotfiles
     dest: "/home/{{ user }}/.dotfiles"
     version: main
+    force: true
 
 - name: Ensure dwm reopsitory is cloned to {{ user }} config directory.
   ansible.builtin.git:
     repo: https://git.suckless.org/dwm
     dest: "/home/{{ user }}/.config/suckless/dwm"
     version: master
+    force: true
 
 - name: Ensure the dwm config file is located in the right directory.
   ansible.builtin.copy:
-    src: "/home/{{ user }}/.dotfiles/dwm/config.h"
+    src: "/home/{{ user }}/.dotfiles/suckless/dwm/config.h"
     dest: "/home/{{ user }}/.config/suckless/dwm/config.h"
 
 - name: Ensure dwm is built and installed.
@@ -25,10 +27,11 @@
     repo: https://git.suckless.org/dwm
     dest: "/home/{{ user }}/.config/suckless/dmenu"
     version: master
+    force: true
 
 - name: Ensure the dmenu config file is located in the right directory.
   ansible.builtin.copy:
-    src: "/home/{{ user }}/.dotfiles/dmenu/config.h"
+    src: "/home/{{ user }}/.dotfiles/suckless/dmenu/config.h"
     dest: "/home/{{ user }}/.config/suckless/dmenu/config.h"
 
 - name: Ensure dmenu is built and installed.

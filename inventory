@@ -1,2 +1,2 @@
-[all]
-127.0.0.1 ansible_connection=local
+[arch]
+127.0.0.1 ansible_ssh_user=chris ansible_ssh_port=2222

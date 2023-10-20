@@ -32,9 +32,6 @@
       - pavucontrol
       - pcmanfm
       - pdftk
-      - pipewire-media-session
-      - pulseaudio
-      - qt6-multimedia-ffmpeg
       - redshift
       - rsync
       - shotcut

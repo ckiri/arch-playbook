@@ -1,7 +1,12 @@
 ---
 - name: Arch Linux Setup
-  hosts: localhost
-  connection: local
+  hosts: arch
+  vars:
+    custom_ssh_port: 2222
+  vars_prompt:
+    - name: "user"
+      prompt: "Enter your username"
+      private: no
 
   roles:
     - role: packages # install pacman packages
