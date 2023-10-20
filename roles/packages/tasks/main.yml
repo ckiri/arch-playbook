@@ -1,53 +1,61 @@
-- name: Install pacman packages.
+- name: Ensure necessary packages are installed.
+  become: yes
   pacman:
     name:
       - alacritty
       - alsa-utils
+      - base
+      - base-devel
       - bind
       - cifs-utils
       - cups
       - curl
+      - dunst
       - feh
       - ffmpeg
       - firefox
+      - freecad
       - fzf
-      - github-cli
+      - gimp
       - gnuplot
+      - gnu-free-fonts
       - hplip
-      - jre-openjdk
-      - jre-openjdk-headless
       - man-db
+      - mpv
       - neovim
       - net-tools
       - nmap
-      - nodejs
-      - noto-fonts
       - noto-fonts-emoji
-      - npm
-      - openscad
+      - obs-studio
       - pacman-contrib
       - pass
+      - pavucontrol
+      - pcmanfm
       - pdftk
-      - pipewire-jack
       - pipewire-media-session
-      - plantuml
       - pulseaudio
       - qt6-multimedia-ffmpeg
       - redshift
       - rsync
+      - shotcut
       - scrot
+      - slock
       - stow
       - superslicer
+      - sxhkd
+      - syncthing
       - tipp10
+      - tmux
       - tree
-      - ttf-hack
+      - ttc-iosevka
+      - unclutter
       - unzip
-      - vagrant
       - virtualbox
       - virtualbox-host-modules-arch
       - wget
       - wireshark-qt
       - xclip
+      - xdg-user-dirs
       - xorg-xev
       - xorg-xinit
       - zathura-pdf-poppler
@@ -55,6 +63,3 @@
       - zsh-syntax-highlighting
     state: present
 
-      # TODO: Install AUR Helper like Paru or Yay
-      # 1. Clone Git Repo (ansible module?)
-      # 2. Make (ansible module?)

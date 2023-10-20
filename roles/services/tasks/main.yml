@@ -1,6 +1,15 @@
-- name: Enable and start cups service.
-  systemd:
+- name: Ensure services are enabled.
+  ansible.builtin.service:
+    become: yes
+    name: {{ item }} 
     enabled: true
-    state: started
+    loop:
+      - cups.service
+      - ntpd.service
+      - sxhkd.service
 
-      # TODO: start ntpd service. Install chrony/openntp?
+- name: Ensure sshd service is disabled.
+  ansible.builtin.service:
+    become: yes
+    name: sshd.service
+    enabled: false

@@ -1,1 +1,74 @@
+- name: Ensure dotfiles repository is cloned to {{ user }} home directory.
+  ansible.builtin.git:
+    repo: https://github.com/ckiri/dotfiles
+    dest: "/home/{{ user }}/.dotfiles"
+    version: main
+
+- name: Ensure dwm reopsitory is cloned to {{ user }} config directory.
+  ansible.builtin.git:
+    repo: https://git.suckless.org/dwm
+    dest: "/home/{{ user }}/.config/suckless/dwm"
+    version: master
+
+- name: Ensure the dwm config file is located in the right directory.
+  ansible.builtin.copy:
+    src: "/home/{{ user }}/.dotfiles/dwm/config.h"
+    dest: "/home/{{ user }}/.config/suckless/dwm/config.h"
+
+- name: Ensure dwm is built and installed.
+  make:
+    chdir: "/home/{{ user }}/.config/suckless/dwm"
+    target: clean install
+
+- name: Ensure dmenu reopsitory is cloned to {{ user }} config directory.
+  ansible.builtin.git:
+    repo: https://git.suckless.org/dwm
+    dest: "/home/{{ user }}/.config/suckless/dmenu"
+    version: master
+
+- name: Ensure the dmenu config file is located in the right directory.
+  ansible.builtin.copy:
+    src: "/home/{{ user }}/.dotfiles/dmenu/config.h"
+    dest: "/home/{{ user }}/.config/suckless/dmenu/config.h"
+
+- name: Ensure dmenu is built and installed.
+  make:
+    chdir: "/home/{{ user }}/.config/suckless/dmenu"
+    target: clean install
+
+- name: Ensure login shell of {{ user }} is set to `/bin/zsh`.
+  ansible.builtin.command: usermod --shell /usr/bin/zsh {{ user }}
+  become: true
+  changed_when: false
+
+- name: Ensure history file for zsh is created.
+  ansible.builtin.file:
+    path: "/home/{{ user }}/.local/zsh/history"
+    state: touch
+
+- name: Ensure file ownership is transferred back to {{ user }}.
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    recurse: yes
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  loop:
+    - "/home/{{ user }}/.config/suckless/dwm"
+    - "/home/{{ user }}/.config/suckless/dmenu"
+    - "/home/{{ user }}/.dotfiles"
+    - "/home/{{ user }}/.local/zsh/history"
+
+- name: Ensure home directory is cleaned up.
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - "/home/{{ user }}/.bashrc"
+    - "/home/{{ user }}/.bash_history"
+    - "/home/{{ user }}/.bash_logout"
+    - "/home/{{ user }}/.ansible"
+
+- name: Ensure symlinks are set.
+  ansible.builtin.command: stow * /home/{{ user }}/.dotfiles --ignore=^config\.h$
 

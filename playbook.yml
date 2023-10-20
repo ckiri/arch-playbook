@@ -1,13 +1,9 @@
 ---
-- name: arch-desk-setup
-  hosts: all
-  become: true
+- name: Arch Linux Setup
+  hosts: localhost
+  connection: local
 
   roles:
-    - role: packages # install pacman and paru packages
-    - role: services # start services e.g. cups, ...
-    - role: users # create a user
-    - role: setup # other
-    - role: filesystem # setup swap
-    - role: dotfiles # deploy dotfiles
-    - role: backup # rsync? over network with homeserver?
+    - role: packages # install pacman packages
+    - role: setup # clone dofiles, compile & build programms
+    - role: services # start and manage services
