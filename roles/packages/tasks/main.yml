@@ -20,6 +20,9 @@
       - gnuplot
       - gnu-free-fonts
       - hplip
+      - libx11
+      - libxft
+      - libxinerama
       - man-db
       - mpv
       - neovim
@@ -53,8 +56,11 @@
       - wireshark-qt
       - xclip
       - xdg-user-dirs
+      - xorg-server
+      - xorg-xcalc
       - xorg-xev
       - xorg-xinit
+      - xorg-xprop
       - zathura-pdf-poppler
       - zip
       - zsh-syntax-highlighting
