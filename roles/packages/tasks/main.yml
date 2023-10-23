@@ -37,6 +37,7 @@
       - pavucontrol
       - pcmanfm
       - pdftk
+      - pulsemixer
       - redshift
       - rsync
       - shotcut
@@ -62,6 +63,7 @@
       - xorg-xev
       - xorg-xinit
       - xorg-xprop
+      - xorg-xsetroot
       - zathura-pdf-poppler
       - zip
       - zsh-syntax-highlighting
