@@ -50,7 +50,7 @@
 
 - name: Ensure the directory for zsh history exists
   ansible.builtin.file:
-    path: "/home/{{ user }}/.local/zsh"
+    path: "/home/{{ user }}/.cache/zsh"
     state: directory
 
 - name: Ensure history file for zsh is created

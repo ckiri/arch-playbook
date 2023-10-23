@@ -1,15 +1,15 @@
-- name: Ensure services are enabled.
+- name: Ensure services are enabled and started.
   ansible.builtin.service:
-    become: yes
     name: "{{ item }}"
     enabled: true
-    loop:
-      - cups.service
-      - ntpd.service
-      - sxhkd.service
+    state: started
+  loop:
+    - cups
 
-- name: Ensure sshd service is disabled.
+- name: Ensure sshd service is disabled and stopped.
   ansible.builtin.service:
-    become: yes
-    name: sshd.service
+    name: "{{ item }}"
     enabled: false
+    state: stopped
+  loop:
+    - sshd
