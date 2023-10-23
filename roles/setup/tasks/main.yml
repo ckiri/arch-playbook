@@ -74,6 +74,8 @@
     - "/home/{{ user }}/Videos"
     - "/home/{{ user }}/Pictures"
     - "/home/{{ user }}/.config/user-dirs.dirs"
+    - "/home/{{ user }}/Music"
+    - "/home/{{ user }}/Public"
 
 - name: Ensure symlinks are set.
   ansible.builtin.shell: stow *
