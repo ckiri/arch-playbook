@@ -18,12 +18,6 @@
     chdir: "/home/{{ user }}/.config/suckless/dmenu"
   become: true
 
-- name: Ensure the dmenu config file is located in the right directory.
-  ansible.builtin.copy:
-    src: "/home/{{ user }}/.dotfiles/suckless/dmenu/config.h"
-    dest: "/home/{{ user }}/.config/suckless/dmenu/config.h"
-    remote_src: true
-
 - name: Ensure dmenu is installed (make clean install).
   ansible.builtin.shell: make clean install
   args:
@@ -42,12 +36,6 @@
   args:
     chdir: "/home/{{ user }}/.config/suckless/dwm"
   become: true
-
-- name: Ensure the dwm config file is located in the right directory.
-  ansible.builtin.copy:
-    src: "/home/{{ user }}/.dotfiles/suckless/dwm/config.h"
-    dest: "/home/{{ user }}/.config/suckless/dwm/config.h"
-    remote_src: true
 
 - name: Ensure dwm is installed (make clean install).
   ansible.builtin.shell: make clean install

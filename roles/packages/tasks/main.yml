@@ -2,6 +2,8 @@
   become: yes
   pacman:
     name:
+      - ttf-ibm-plex
+      - ttc-iosevka
       - alacritty
       - alsa-utils
       - base
@@ -11,6 +13,7 @@
       - cups
       - curl
       - dunst
+      - dosfstools
       - feh
       - ffmpeg
       - firefox
@@ -47,7 +50,6 @@
       - tipp10
       - tmux
       - tree
-      - ttc-iosevka
       - unclutter
       - unzip
       - virtualbox
