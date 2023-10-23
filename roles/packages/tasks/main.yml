@@ -55,7 +55,6 @@
       - virtualbox
       - virtualbox-host-modules-arch
       - wget
-      - wireshark-qt
       - xclip
       - xdg-user-dirs
       - xorg-server
