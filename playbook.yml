@@ -1,8 +1,7 @@
 ---
 - name: Arch Linux Setup
-  hosts: arch
+  hosts: arch-sys
   vars:
-    custom_ssh_port: 2222
   vars_prompt:
     - name: "user"
       prompt: "Enter your username"

@@ -1,2 +1,2 @@
-[arch]
-127.0.0.1 ansible_ssh_user=chris ansible_ssh_port=2222
+[arch-sys]
+127.0.0.1 ansible_ssh_user=<user_name> ansible_ssh_port=<port>

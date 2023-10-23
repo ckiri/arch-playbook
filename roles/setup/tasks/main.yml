@@ -8,7 +8,7 @@
 - name: Ensure suckless configs repo is cloned to {{ user }} `.config` directory.
   ansible.builtin.git:
     repo: https://github.com/ckiri/suckless-configs
-    dest: "/home/{{ user }}/.configs/suckless/suckless-configs"
+    dest: "/home/{{ user }}/.config/suckless/suckless-configs"
     version: main
     force: true
 
