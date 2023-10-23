@@ -92,15 +92,22 @@
   become: true
   changed_when: false
 
-- name: Ensure the directory for zsh history exists
+- name: Ensure needed directories exist.
   ansible.builtin.file:
-    path: "/home/{{ user }}/.cache/zsh"
+    path: "{{ item }}"
     state: directory
+  loop:
+    - "/home/{{ user }}/.cache/weather"
+    - "/home/{{ user }}/.cache/zsh"
 
-- name: Ensure history file for zsh is created
+
+- name: Ensure needed files exist.
   ansible.builtin.file:
-    path: "/home/{{ user }}/.cache/zsh/history"
+    path: "{{ item }}"
     state: touch
+  loop:
+    - "/home/{{ user }}/.cache/weather/weather"
+    - "/home/{{ user }}/.cache/zsh/history"
 
 - name: Ensure home directory is cleaned up.
   ansible.builtin.file:
