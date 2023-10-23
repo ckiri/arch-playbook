@@ -1,15 +1,17 @@
 - name: Ensure services are enabled and started.
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: "{{ item }}"
     enabled: true
     state: started
   loop:
     - cups
+  become: true
 
 - name: Ensure sshd service is disabled and stopped.
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: "{{ item }}"
     enabled: false
     state: stopped
   loop:
     - sshd
+  become: true
