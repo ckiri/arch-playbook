@@ -3,18 +3,21 @@
     repo: https://github.com/ckiri/dotfiles
     dest: "/home/{{ user }}/.dotfiles"
     version: main
+    force: true
 
 - name: Ensure suckless configs repo is cloned to {{ user }} `.config` directory.
   ansible.builtin.git:
     repo: https://github.com/ckiri/suckless-configs
     dest: "/home/{{ user }}/.configs/suckless/suckless-configs"
     version: main
+    force: true
 
 - name: Ensure dmenu reopsitory is cloned to {{ user }} config directory.
   ansible.builtin.git:
     repo: https://git.suckless.org/dmenu
     dest: "/home/{{ user }}/.config/suckless/dmenu"
     version: master
+    force: true
 
 - name: Ensure dmenu is built (make).
   ansible.builtin.shell: make
@@ -39,6 +42,7 @@
     repo: https://git.suckless.org/dwm
     dest: "/home/{{ user }}/.config/suckless/dwm"
     version: master
+    force: true
 
 - name: Ensure dwm is built (make).
   ansible.builtin.shell: make
@@ -63,6 +67,7 @@
     repo: https://git.suckless.org/slstatus
     dest: "/home/{{ user }}/.config/suckless/slstatus"
     version: master
+    force: true
 
 - name: Ensure slstatus is built (make).
   ansible.builtin.shell: make
