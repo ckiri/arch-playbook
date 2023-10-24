@@ -5,6 +5,7 @@
     state: started
   loop:
     - cups
+    - bluetooth
   become: true
 
 - name: Ensure sshd service is disabled and stopped.
