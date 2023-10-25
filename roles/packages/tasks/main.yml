@@ -3,12 +3,17 @@
   pacman:
     name:
       - ttf-ibm-plex
-      - ttc-iosevka
+      - ttc-iosevk
+      - arandr
       - alacritty
       - alsa-utils
       - base
       - base-devel
       - bind
+      - blueman
+      - bluez
+      - bluez-utils
+      - brightnessctl
       - cifs-utils
       - cups
       - curl
@@ -17,9 +22,12 @@
       - feh
       - ffmpeg
       - firefox
+      - fprintd
       - freecad
       - fzf
       - gimp
+      - github-cli
+      - gnome-keyring
       - gnuplot
       - hplip
       - libx11
@@ -33,16 +41,19 @@
       - noto-fonts-emoji
       - obs-studio
       - pacman-contrib
+      - papirus-icon-theme
       - pass
       - pavucontrol
       - pcmanfm
       - pdftk
       - pulsemixer
+      - python-pipx
       - redshift
       - rsync
       - shotcut
       - scrot
       - slock
+      - sof-firmware
       - stow
       - superslicer
       - sxhkd
