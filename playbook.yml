@@ -1,6 +1,6 @@
 ---
 - name: Arch Linux Setup
-  hosts: arch-sys
+  hosts: arch
   vars:
   vars_prompt:
     - name: "user"
