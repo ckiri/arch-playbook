@@ -1,2 +1,2 @@
 [arch]
-<ip.addr.of.target> ansible_ssh_user=<username> ansible_ssh_port=<port_no>
+127.0.0.1
