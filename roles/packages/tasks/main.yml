@@ -2,10 +2,7 @@
   become: yes
   pacman:
     name:
-      - ttf-ibm-plex
-      - ttc-iosevk
       - arandr
-      - alacritty
       - alsa-utils
       - base
       - base-devel
@@ -19,38 +16,44 @@
       - curl
       - dunst
       - dosfstools
+      - exfat-utils
       - feh
       - ffmpeg
       - firefox
       - fprintd
-      - freecad
       - fzf
-      - gimp
+      - ghidra
       - github-cli
-      - gnome-keyring
       - gnuplot
       - hplip
       - libx11
       - libxft
       - libxinerama
+      - keepassxc
       - man-db
+      - mpd
       - mpv
+      - ncmpcpp
       - neovim
       - net-tools
+      - networkmanager
       - nmap
+      - noto-fonts
       - noto-fonts-emoji
+      - openscad
       - obs-studio
       - pacman-contrib
-      - papirus-icon-theme
       - pass
       - pavucontrol
       - pcmanfm
       - pdftk
       - pulsemixer
+      - python3
       - python-pipx
+      - ranger
       - redshift
       - rsync
-      - shotcut
+      - screen
       - scrot
       - slock
       - sof-firmware
@@ -58,25 +61,33 @@
       - superslicer
       - sxhkd
       - syncthing
+      - tar
       - thunderbird
       - tipp10
       - tmux
+      - ttf-fira-mono
+      - ttf-fira-sans
       - tree
       - unclutter
       - unzip
+      - vi
       - virtualbox
       - virtualbox-host-modules-arch
       - wget
+      - wireplumber
       - xclip
       - xdg-user-dirs
+      - xorg-xrandr
       - xorg-server
       - xorg-xcalc
       - xorg-xev
       - xorg-xinit
       - xorg-xprop
       - xorg-xsetroot
+      - xt-dlp
       - zathura-pdf-poppler
+      - zram-generator
       - zip
-      - zsh-syntax-highlighting
+      - zsh
     state: present
 

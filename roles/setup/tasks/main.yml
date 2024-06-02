@@ -100,7 +100,6 @@
     - "/home/{{ user }}/.cache/weather"
     - "/home/{{ user }}/.cache/zsh"
 
-
 - name: Ensure needed files exist.
   ansible.builtin.file:
     path: "{{ item }}"
