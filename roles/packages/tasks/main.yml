@@ -2,6 +2,7 @@
   become: yes
   pacman:
     name:
+      - alacritty
       - arandr
       - alsa-utils
       - base
@@ -23,13 +24,14 @@
       - fprintd
       - fzf
       - ghidra
+      - gammastep
       - github-cli
       - gnuplot
       - hplip
+      - hyprland
       - libx11
       - libxft
       - libxinerama
-      - keepassxc
       - man-db
       - mpd
       - mpv
@@ -40,22 +42,19 @@
       - nmap
       - noto-fonts
       - noto-fonts-emoji
+      - noto-fonts-extra
       - openscad
       - obs-studio
       - pacman-contrib
       - pass
       - pavucontrol
-      - pcmanfm
       - pdftk
       - pulsemixer
       - python3
       - python-pipx
       - ranger
-      - redshift
       - rsync
       - screen
-      - scrot
-      - slock
       - sof-firmware
       - stow
       - superslicer
@@ -63,16 +62,16 @@
       - syncthing
       - tar
       - thunderbird
-      - tipp10
       - tmux
-      - ttf-fira-mono
-      - ttf-fira-sans
+      - ttf-hack
+      - ttf-nerd-fonts-symbols
       - tree
       - unclutter
       - unzip
       - vi
       - virtualbox
       - virtualbox-host-modules-arch
+      - waybar
       - wget
       - wireplumber
       - xclip
@@ -84,7 +83,6 @@
       - xorg-xinit
       - xorg-xprop
       - xorg-xsetroot
-      - xt-dlp
       - zathura-pdf-poppler
       - zram-generator
       - zip
