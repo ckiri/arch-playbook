@@ -8,31 +8,30 @@
       - base
       - base-devel
       - bind
-      - blueman
+      - blender
       - bluez
       - bluez-utils
-      - brightnessctl
       - cifs-utils
+      - ctags
       - cups
       - curl
       - dunst
+      - dnsmasq
       - dosfstools
       - exfat-utils
       - feh
       - ffmpeg
       - firefox
-      - fprintd
       - fzf
-      - ghidra
       - gammastep
-      - github-cli
+      - gnome-themes-extra
       - gnuplot
+      - grimp
       - hplip
-      - hyprland
-      - libx11
-      - libxft
-      - libxinerama
+      - imv
+      - jq
       - man-db
+      - misfortune
       - mpd
       - mpv
       - ncmpcpp
@@ -44,20 +43,30 @@
       - noto-fonts-emoji
       - noto-fonts-extra
       - openscad
+      - openssh
       - obs-studio
       - pacman-contrib
+      - papirus-icon-theme
       - pass
-      - pavucontrol
       - pdftk
+      - podman
+      - pulseaudio
+      - pulseaudio-bloetooth
       - pulsemixer
       - python3
       - python-pipx
+      - qemu-base
       - ranger
       - rsync
       - screen
+      - slurp
       - sof-firmware
+      - sshpass
       - stow
       - superslicer
+      - sway
+      - swayidle
+      - swaylock
       - sxhkd
       - syncthing
       - tar
@@ -66,26 +75,18 @@
       - ttf-hack
       - ttf-nerd-fonts-symbols
       - tree
-      - unclutter
       - unzip
-      - vi
-      - virtualbox
-      - virtualbox-host-modules-arch
-      - waybar
       - wget
+      - wmenu
       - wireplumber
+      - wl-clipboard
+      - wlopm
+      - wlr-randr
       - xclip
       - xdg-user-dirs
-      - xorg-xrandr
-      - xorg-server
-      - xorg-xcalc
-      - xorg-xev
-      - xorg-xinit
-      - xorg-xprop
-      - xorg-xsetroot
+      - sdg-desktop-portal-wlr
       - zathura-pdf-poppler
       - zram-generator
       - zip
       - zsh
     state: present
-

@@ -5,88 +5,6 @@
     version: main
     force: true
 
-- name: Ensure suckless configs repo is cloned to {{ user }} `.config` directory.
-  ansible.builtin.git:
-    repo: https://github.com/ckiri/suckless-configs
-    dest: "/home/{{ user }}/.config/suckless/suckless-configs"
-    version: main
-    force: true
-
-- name: Ensure dmenu reopsitory is cloned to {{ user }} config directory.
-  ansible.builtin.git:
-    repo: https://git.suckless.org/dmenu
-    dest: "/home/{{ user }}/.config/suckless/dmenu"
-    version: master
-    force: true
-
-- name: Ensure dmenu is built (make).
-  ansible.builtin.shell: make
-  args:
-    chdir: "/home/{{ user }}/.config/suckless/dmenu"
-  become: true
-
-- name: Ensure the dmenu config file is located in the right directory.
-  ansible.builtin.copy:
-    src: "/home/{{ user }}/.config/suckless/suckless-configs/dmenu/config.h"
-    dest: "/home/{{ user }}/.config/suckless/dmenu/config.h"
-    remote_src: true
-
-- name: Ensure dmenu is installed (make clean install).
-  ansible.builtin.shell: make clean install
-  args:
-      chdir: "/home/{{ user }}/.config/suckless/dmenu"
-  become: true
-
-- name: Ensure dwm reopsitory is cloned to {{ user }} config directory.
-  ansible.builtin.git:
-    repo: https://git.suckless.org/dwm
-    dest: "/home/{{ user }}/.config/suckless/dwm"
-    version: master
-    force: true
-
-- name: Ensure dwm is built (make).
-  ansible.builtin.shell: make
-  args:
-    chdir: "/home/{{ user }}/.config/suckless/dwm"
-  become: true
-
-- name: Ensure the dwm config file is located in the right directory.
-  ansible.builtin.copy:
-    src: "/home/{{ user }}/.config/suckless/suckless-configs/dwm/config.h"
-    dest: "/home/{{ user }}/.config/suckless/dwm/config.h"
-    remote_src: true
-
-- name: Ensure dwm is installed (make clean install).
-  ansible.builtin.shell: make clean install
-  args:
-    chdir: "/home/{{ user }}/.config/suckless/dwm"
-  become: true
-
-- name: Ensure slstatus reopsitory is cloned to {{ user }} config directory.
-  ansible.builtin.git:
-    repo: https://git.suckless.org/slstatus
-    dest: "/home/{{ user }}/.config/suckless/slstatus"
-    version: master
-    force: true
-
-- name: Ensure slstatus is built (make).
-  ansible.builtin.shell: make
-  args:
-    chdir: "/home/{{ user }}/.config/suckless/slstatus"
-  become: true
-
-- name: Ensure the slstatus config file is located in the right directory.
-  ansible.builtin.copy:
-    src: "/home/{{ user }}/.config/suckless/suckless-configs/slstatus/config.h"
-    dest: "/home/{{ user }}/.config/suckless/slstatus/config.h"
-    remote_src: true
-
-- name: Ensure slstatus is installed (make clean install).
-  ansible.builtin.shell: make clean install
-  args:
-    chdir: "/home/{{ user }}/.config/suckless/slstatus"
-  become: true
-
 - name: Ensure login shell of {{ user }} is set to `/bin/zsh`.
   ansible.builtin.command: usermod --shell /usr/bin/zsh {{ user }}
   become: true
@@ -129,7 +47,18 @@
     - "/home/{{ user }}/.config/suckless/suckless-configs"
 
 - name: Ensure symlinks are set.
-  ansible.builtin.shell: stow *
+  ansible.builtin.shell: "stow {{ item }}"
   args:
     chdir: "/home/{{ user }}/.dotfiles"
-
+  loop:
+    - alacritty
+    - dunst
+    - fontconfig
+    - mpd
+    - ncmpcpp
+    - nvim
+    - sway
+    - swaylock
+    - sxhkd
+    - tmux
+    - zathura
