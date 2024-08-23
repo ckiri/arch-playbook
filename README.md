@@ -1,13 +1,14 @@
 # Arch Playbook
 
-This ansible playbooks automates the setup process of my specific configuration
-of Arch Linux.
+This ansible playbooks automates the setup process of a minimal but usable
+Arch Linux configuration.
 
 ## Prerequisites
 
 What has to be avaliable for it to work:
 - Ansible
 - Git
+- curl
 - A fresh install of Arch Linux
 
 ## Run Setup

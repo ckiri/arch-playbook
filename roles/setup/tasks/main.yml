@@ -57,8 +57,11 @@
     - mpd
     - ncmpcpp
     - nvim
+    - statusbar
     - sway
     - swaylock
     - sxhkd
     - tmux
+    - wayshot
+    - weather
     - zathura

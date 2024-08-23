@@ -26,7 +26,7 @@
       - gammastep
       - gnome-themes-extra
       - gnuplot
-      - grimp
+      - grim
       - hplip
       - imv
       - jq
@@ -50,9 +50,6 @@
       - pass
       - pdftk
       - podman
-      - pulseaudio
-      - pulseaudio-bloetooth
-      - pulsemixer
       - python3
       - python-pipx
       - qemu-base
@@ -63,7 +60,6 @@
       - sof-firmware
       - sshpass
       - stow
-      - superslicer
       - sway
       - swayidle
       - swaylock
@@ -80,11 +76,10 @@
       - wmenu
       - wireplumber
       - wl-clipboard
-      - wlopm
       - wlr-randr
       - xclip
       - xdg-user-dirs
-      - sdg-desktop-portal-wlr
+      - xdg-desktop-portal-wlr
       - zathura-pdf-poppler
       - zram-generator
       - zip
