@@ -1,21 +1,23 @@
 #!/bin/sh
 
-set -eu
+main() {
+  LOCATION=$(pwd)
 
-LOCATION=$(pwd)
+  sudo pacman -S \
+    python3 \
+    ansible \
+    git
 
-sudo pacman -S \
-  python3 \
-  ansible \
-  git
+  git clone https://github.com/ckiri/arch-playbook
+  cd arch-playbook
 
-git clone https://github.com/ckiri/arch-playbook
-cd arch-playbook
+  ansible-playbook -i inventory -K playbook.yml
 
-ansible-playbook -i inventory -K playbook.yml
+  cd $LOCATION
 
-cd $LOCATION
+  rm -r arch-playbook
 
-rm -r arch-playbook
+  exit 0
+}
 
-exit 0
+main
