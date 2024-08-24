@@ -3,18 +3,16 @@
   pacman:
     name:
       - alacritty
-      - arandr
       - alsa-utils
       - base
       - base-devel
+      - bemenu-wayland
       - bind
-      - blender
       - bluez
       - bluez-utils
       - cifs-utils
       - ctags
       - cups
-      - curl
       - dunst
       - dnsmasq
       - dosfstools
@@ -25,9 +23,7 @@
       - fzf
       - gammastep
       - gnome-themes-extra
-      - gnuplot
       - grim
-      - hplip
       - imv
       - jq
       - man-db
@@ -37,14 +33,11 @@
       - ncmpcpp
       - neovim
       - net-tools
-      - networkmanager
       - nmap
       - noto-fonts
       - noto-fonts-emoji
       - noto-fonts-extra
-      - openscad
       - openssh
-      - obs-studio
       - pacman-contrib
       - papirus-icon-theme
       - pass
@@ -58,12 +51,10 @@
       - screen
       - slurp
       - sof-firmware
-      - sshpass
       - stow
       - sway
       - swayidle
       - swaylock
-      - sxhkd
       - syncthing
       - tar
       - thunderbird
@@ -72,12 +63,10 @@
       - ttf-nerd-fonts-symbols
       - tree
       - unzip
+      - virt-manager
       - wget
-      - wmenu
-      - wireplumber
       - wl-clipboard
       - wlr-randr
-      - xclip
       - xdg-user-dirs
       - xdg-desktop-portal-wlr
       - zathura-pdf-poppler
