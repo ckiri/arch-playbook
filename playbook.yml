@@ -1,11 +1,6 @@
 ---
 - name: Arch Linux Setup
   hosts: arch
-  vars:
-  vars_prompt:
-    - name: "user"
-      prompt: "Enter your username"
-      private: no
 
   roles:
     - role: packages # install pacman packages

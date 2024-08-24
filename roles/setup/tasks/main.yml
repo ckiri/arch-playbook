@@ -1,7 +1,7 @@
 - name: Ensure dotfiles repository is cloned to {{ user }} home directory.
   ansible.builtin.git:
     repo: https://github.com/ckiri/dotfiles
-    dest: "/home/{{ user }}/.dotfiles"
+    dest: "~/.dotfiles"
     version: main
     force: true
 
@@ -15,41 +15,41 @@
     path: "{{ item }}"
     state: directory
   loop:
-    - "/home/{{ user }}/.cache/weather"
-    - "/home/{{ user }}/.cache/zsh"
+    - "~/.cache/weather"
+    - "~/.cache/zsh"
 
 - name: Ensure needed files exist.
   ansible.builtin.file:
     path: "{{ item }}"
     state: touch
   loop:
-    - "/home/{{ user }}/.cache/weather/weather"
-    - "/home/{{ user }}/.cache/zsh/history"
+    - "~/.cache/weather/weather"
+    - "~/.cache/zsh/history"
 
 - name: Ensure home directory is cleaned up.
   ansible.builtin.file:
     path: "{{ item }}"
     state: absent
   loop:
-    - "/home/{{ user }}/.bashrc"
-    - "/home/{{ user }}/.bash_history"
-    - "/home/{{ user }}/.bash_logout"
-    - "/home/{{ user }}/.ansible"
-    - "/home/{{ user }}/Documents"
-    - "/home/{{ user }}/Templates"
-    - "/home/{{ user }}/Desktop"
-    - "/home/{{ user }}/Downloads"
-    - "/home/{{ user }}/Videos"
-    - "/home/{{ user }}/Pictures"
-    - "/home/{{ user }}/.config/user-dirs.dirs"
-    - "/home/{{ user }}/Music"
-    - "/home/{{ user }}/Public"
-    - "/home/{{ user }}/.config/suckless/suckless-configs"
+    - "~/.bashrc"
+    - "~/.bash_history"
+    - "~/.bash_logout"
+    - "~/.ansible"
+    - "~/Documents"
+    - "~/Templates"
+    - "~/Desktop"
+    - "~/Downloads"
+    - "~/Videos"
+    - "~/Pictures"
+    - "~/.config/user-dirs.dirs"
+    - "~/Music"
+    - "~/Public"
+    - "~/.config/suckless/suckless-configs"
 
 - name: Ensure symlinks are set.
   ansible.builtin.shell: "stow {{ item }}"
   args:
-    chdir: "/home/{{ user }}/.dotfiles"
+    chdir: "~/.dotfiles"
   loop:
     - alacritty
     - dunst
