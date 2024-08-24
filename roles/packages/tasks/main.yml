@@ -6,7 +6,6 @@
       - alsa-utils
       - base
       - base-devel
-      - bemenu-wayland
       - bind
       - bluez
       - bluez-utils
@@ -67,6 +66,7 @@
       - wget
       - wl-clipboard
       - wlr-randr
+      - wmenu
       - xdg-user-dirs
       - xdg-desktop-portal-wlr
       - zathura-pdf-poppler
