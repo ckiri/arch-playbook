@@ -10,7 +10,7 @@ sudo pacman -S \
   git
 
 git clone https://github.com/ckiri/arch-playbook
-cd playbook
+cd arch-playbook
 
 ansible-playbook -i inventory -K playbook.yml
 
