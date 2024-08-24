@@ -41,7 +41,6 @@
       - papirus-icon-theme
       - pass
       - pdftk
-      - podman
       - python3
       - python-pipx
       - qemu-base
