@@ -60,7 +60,6 @@
       - ttf-liberation
       - ttf-hack
       - ttf-nerd-fonts-symbols
-      - ucode
       - unzip
       - virt-manager
       - wget
