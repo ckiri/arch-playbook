@@ -9,19 +9,19 @@ cd $DIR
 # Check for CPU vendor & install microcode update image
 printf "Detect CPU vendor and install res.\n"
 cpu=$(lscpu)
-[ -z "$(grep -e "AMD" <<< $cpu)" ] \
+[ -n "$(grep -e "AMD" <<< $cpu)" ] \
   && REQ_PACKAGES="${REQ_PACKAGES} amd-ucode"
-[ -z "$(grep -e "Intel" <<< $cpu)" ] \
+[ -n "$(grep -e "Intel" <<< $cpu)" ] \
   && REQ_PACKAGES="${REQ_PACKAGES} intel-ucode"
 
 # Check for GPU vendor & install drivers
 pci=$(lspci)
 printf "Detect GPU vendor and intall driver.\n"
-[ -z "$(grep -E ".*VGA compatible controller:\s*[^:]+Radeon.*" <<< $pci)" ] \
+[ -n "$(grep -E ".*VGA compatible controller:\s*[^:]+Radeon.*" <<< $pci)" ] \
   && REQ_PACKAGES="${REQ_PACKAGES} vulkan-radeon lib32-vulkan-radeon"
-[ -z "$(grep -E ".*VGA compatible controller:\s*[^:]+NVIDIA.*" <<< $pci)" ] \
+[ -n "$(grep -E ".*VGA compatible controller:\s*[^:]+NVIDIA.*" <<< $pci)" ] \
   && REQ_PACKAGES="${REQ_PACKAGES} nvidia lib32-nvidia-utils egl-wayland"
-[ -z "$(grep -E ".*VGA compatible controller:\s*[^:]+Intel.*" <<< $pci)" ] \
+[ -n "$(grep -E ".*VGA compatible controller:\s*[^:]+Intel.*" <<< $pci)" ] \
   && REQ_PACKAGES="${REQ_PACKAGES} vulkan-intel lib32-vulkan-intel"
 
 sudo pacman -Syu --needed $REQ_PACKAGES
