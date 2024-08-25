@@ -1,0 +1,71 @@
+alacritty,Fast and minimal terminal emulator written in Rust
+ansible,"extra-simpe" tool for resource provisioning
+bind,Implementation of the DNS protocol
+bluez,Deamons for bluetooth protocol stack
+bluez-utils,Development and debugging utilities for bluetooth protocol stack
+cifs-utils,CIFS filesystem tools (e.g. mounting a NAS)
+ctags,Generates index files of language objects found in source files
+cups,The C Unix Printing Service - aka. Print files on your printer
+dnsmasq,Lightweight DNS forwarder and DHCP server
+dosfstools,Format USB sticks in fat32
+dunst,Notification Deamon
+ffmpeg,Universal media converter
+firefox,Usable Webbrowser
+fzf,Command-line fuzzy finder
+gammastep,Adjust the color temperature of your screen (e.g. remove blue light)
+git,Version control
+gnome-themes-extra,Standard GTK themes
+gnuplot,Plotting package (create diagrams & stuff)
+grim,Screenshot utility for Wayland
+imv,Image viewer for Wayland and X11
+jq,Command-line JSON processor
+man-db,Utility for reading man pages
+minicom,A serial communication program (e.g. connect to serial of a µC)
+mpd,Server-side application for playing music/audio files
+mpv,Media player - I mainly use it for playing video files
+ncmpcpp,CLI frontend for mpd
+neovim,Texeditor - Fork of Vim
+net-tools,Configuration tools for Linux networking
+nmap,Utility for network discovery
+obs-studio,Screen recording software
+openscad,CAD modeller for programmers
+openssh,SSH protocol implementation
+pacman-contrib,Contributed scripts and tools for the pacman package manager
+papirus-icon-theme,Flat icon theme
+pass,Local password store/vault like keepass but minimal
+pavucontrol,PulseAudio Volume Control - GUI for controling audio
+pdftk,CLI tool for working with PDFs
+podman,Management tool for containers, images and pods
+pulsemixer,CLI tool for controling audio
+python-pipx,Install Python packages
+qemu-base,Quick Emulator for headless environments - run virtual machines via KVM
+qt6-wayland,Qt APIs for Wayland - needed for Qt apps to work
+ranger,Simple CLI vim-like file manager
+rsync,File copying tool for remote and local files (awesome for backups)
+slurp,Region selector in a Wayland compsositor - needed for obs/screen sharing
+sof-firmware,Audio firmware
+stow,Symlink e.g. config/dotfiles from a central directory
+sway,Tiling Wayland compositor
+swayidle,Idle management deamon for Wayland
+swaylock,Screen locker for wayland
+syncthing,Continuous replication/cluster synchronization thing
+thunderbird,E-Mail client
+tmux,Terminal multiplexer - create splits/tabs inside a shell session
+tree,Show directory structures
+ttf-liberation,Standard font
+ttf-hack,Monospace font
+ttf-nerd-fonts-symbols,Nerdfonts (Symbols as text)
+ucode,Specific microcode update for CPU vendors (Intel/AMD)
+unzip,Extract and view files
+virt-manager,GUI for managing virtual machines (e.g. QEMU)
+wget,Network utility to retrieve files from the web
+wireplumber,Session manager implementation for Pipewire
+wl-clipboard,CLI copy/paste utilities for Wayland
+wlr-randr,Manage outputs of a Wayland compsitor
+xdg-desktop-portal-wlr,xdg-desktop backend for wlroots
+xdg-user-dirs,Manage user directories like ~/Downloads
+xorg-xwayland,Run X clients under wayland
+zathura,Minimalistic document viewer
+zathura-pdf-poppler,Adds PDF support to zathura
+zip,Compress/archive files in zip format
+zsh,Advanced and programmable shell for UNIX
