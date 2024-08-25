@@ -3,50 +3,50 @@
   pacman:
     name:
       - alacritty
-      - alsa-utils
-      - base
-      - base-devel
+      - ansible
+      - bemenu-wayland
       - bind
       - bluez
       - bluez-utils
       - cifs-utils
       - ctags
       - cups
-      - dunst
       - dnsmasq
       - dosfstools
-      - exfat-utils
-      - feh
+      - dunst
       - ffmpeg
       - firefox
       - fzf
       - gammastep
+      - git
       - gnome-themes-extra
+      - gnuplot
       - grim
       - imv
       - jq
       - man-db
-      - misfortune
+      - minicom
       - mpd
       - mpv
       - ncmpcpp
       - neovim
       - net-tools
       - nmap
-      - noto-fonts
-      - noto-fonts-emoji
-      - noto-fonts-extra
+      - obs-studio
+      - openscad
       - openssh
       - pacman-contrib
       - papirus-icon-theme
       - pass
+      - pavucontrol
       - pdftk
-      - python3
+      - podman
+      - pulsemixer
       - python-pipx
       - qemu-base
+      - qt6-wayland
       - ranger
       - rsync
-      - screen
       - slurp
       - sof-firmware
       - stow
@@ -54,22 +54,24 @@
       - swayidle
       - swaylock
       - syncthing
-      - tar
       - thunderbird
       - tmux
+      - tree
+      - ttf-liberation
       - ttf-hack
       - ttf-nerd-fonts-symbols
-      - tree
+      - ucode
       - unzip
       - virt-manager
       - wget
+      - wireplumber
       - wl-clipboard
       - wlr-randr
-      - wmenu
-      - xdg-user-dirs
       - xdg-desktop-portal-wlr
+      - xdg-user-dirs
+      - xorg-xwayland
+      - zathura
       - zathura-pdf-poppler
-      - zram-generator
       - zip
       - zsh
     state: present

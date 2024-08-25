@@ -1,11 +1,11 @@
-- name: Ensure dotfiles repository is cloned to {{ user }} home directory.
+- name: Ensure dotfiles repository is cloned to home directory.
   ansible.builtin.git:
     repo: https://github.com/ckiri/dotfiles
     dest: "~/.dotfiles"
     version: main
     force: true
 
-- name: Ensure login shell of $USER is set to `/bin/zsh`.
+- name: Ensure login shell is set to `/bin/zsh`.
   ansible.builtin.command: usermod --shell /usr/bin/zsh $USER
   become: true
   changed_when: false
@@ -44,7 +44,6 @@
     - "~/.config/user-dirs.dirs"
     - "~/Music"
     - "~/Public"
-    - "~/.config/suckless/suckless-configs"
 
 - name: Ensure symlinks are set.
   ansible.builtin.shell: "stow {{ item }}"
@@ -52,6 +51,7 @@
     chdir: "~/.dotfiles"
   loop:
     - alacritty
+    - runmenu
     - dunst
     - fontconfig
     - mpd
