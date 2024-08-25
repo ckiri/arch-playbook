@@ -5,8 +5,8 @@
     version: main
     force: true
 
-- name: Ensure login shell of {{ user }} is set to `/bin/zsh`.
-  ansible.builtin.command: usermod --shell /usr/bin/zsh {{ user }}
+- name: Ensure login shell of $USER is set to `/bin/zsh`.
+  ansible.builtin.command: usermod --shell /usr/bin/zsh $USER
   become: true
   changed_when: false
 
