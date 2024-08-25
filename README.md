@@ -1,17 +1,25 @@
 # Arch Playbook
 
-This ansible playbooks automates the setup process of a minimal but usable
-Arch Linux configuration.
+This automates the setup process of a minimal but usable
+Arch Linux configuration by using a combination of `sh` and `playbook` steps.
 
 ## Prerequisites
 
 What has to be avaliable for it to work:
-- Ansible
-- Git
-- curl
 - A fresh install of Arch Linux
 
 ## Run Setup
+
+There are two ways to execute the setup.
+
+### Remote script execution
+
+From within your fresh Arch-Linux install run:
+```bash
+curl -fsSL https://ckiri.github.io/arch-playbook/setup.sh | sh
+```
+
+### Start manually
 
 To start the playbook, first clone this repository:
 ```bash
