@@ -3,7 +3,7 @@
 main() {
   LOCATION=$(pwd)
 
-  sudo pacman -S \
+  sudo pacman -Syu \
     python3 \
     ansible \
     git
