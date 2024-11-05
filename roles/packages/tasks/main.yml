@@ -3,11 +3,13 @@
   pacman:
     name:
       - alacritty
-      - ansible
-      - bemenu-wayland
+      - alsa-utils
+      - base
       - bind
       - bluez
       - bluez-utils
+      - bridge-utils
+      - brightnessctl
       - cifs-utils
       - ctags
       - cups
@@ -19,13 +21,17 @@
       - fzf
       - gammastep
       - git
-      - gnome-themes-extra
+      - go
       - gnuplot
+      - gnu-free-fonts
       - grim
       - imv
       - jq
+      - labwc
+      - labwc-im
       - man-db
       - minicom
+      - misfortune
       - mpd
       - mpv
       - ncmpcpp
@@ -50,15 +56,17 @@
       - slurp
       - sof-firmware
       - stow
-      - sway
-      - swayidle
-      - swaylock
+      - hypridle
+      - hyprland
+      - hyprlock
       - syncthing
+      - texlive-core
+      - texlive-langenglish
+      - texlive-langgerman
       - thunderbird
       - tmux
       - tree
-      - ttf-liberation
-      - ttf-hack
+      - ttf-joypixels
       - ttf-nerd-fonts-symbols
       - unzip
       - virt-manager
@@ -66,6 +74,7 @@
       - wireplumber
       - wl-clipboard
       - wlr-randr
+      - wmenu
       - xdg-desktop-portal-wlr
       - xdg-user-dirs
       - xorg-xwayland

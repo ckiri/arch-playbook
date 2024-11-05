@@ -51,16 +51,18 @@
     chdir: "~/.dotfiles"
   loop:
     - alacritty
-    - runmenu
+    - code
     - dunst
     - fontconfig
     - mpd
     - ncmpcpp
     - nvim
+    - openpdf
     - statusbar
     - sway
     - swaylock
     - sxhkd
+    - timer
     - tmux
     - wayshot
     - weather
