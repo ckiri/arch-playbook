@@ -52,19 +52,20 @@
   loop:
     - alacritty
     - code
+    - dirs
+    - emojipicker
+    - hypr
+    - kanshi
+    - labwc
+    - runmenu
     - dunst
     - fontconfig
-    - mpd
-    - ncmpcpp
     - nvim
     - openpdf
-    - statusbar
-    - sway
-    - swaylock
-    - sxhkd
+    - passmenu
     - timer
     - tmux
+    - waybar
     - wayshot
-    - weather
     - zathura
     - zsh

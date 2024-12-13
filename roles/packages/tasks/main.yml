@@ -4,9 +4,12 @@
     name:
       - alacritty
       - alsa-utils
+      - ansible
       - base
+      - base-devel
       - bind
       - bluez
+      - bluez-tools
       - bluez-utils
       - bridge-utils
       - brightnessctl
@@ -22,30 +25,27 @@
       - gammastep
       - git
       - go
-      - gnuplot
+      - gnome-themes-extra
       - gnu-free-fonts
       - grim
       - imv
       - jq
+      - kanshi
       - labwc
       - labwc-im
       - man-db
       - minicom
-      - misfortune
-      - mpd
       - mpv
-      - ncmpcpp
       - neovim
       - net-tools
       - nmap
-      - obs-studio
-      - openscad
       - openssh
       - pacman-contrib
       - papirus-icon-theme
       - pass
       - pavucontrol
       - pdftk
+      - plan9port
       - podman
       - pulsemixer
       - python-pipx
@@ -68,8 +68,14 @@
       - tree
       - ttf-joypixels
       - ttf-nerd-fonts-symbols
+      - syncthing
+      - terminus-font
+      - thunderbird
+      - tmux
+      - tree
       - unzip
       - virt-manager
+      - waybar
       - wget
       - wireplumber
       - wl-clipboard
@@ -79,7 +85,8 @@
       - xdg-user-dirs
       - xorg-xwayland
       - zathura
-      - zathura-pdf-poppler
+      - zathura-pdf-mupdf
+      - zathura-ps
       - zip
       - zsh
     state: present
