@@ -24,7 +24,6 @@
       - fzf
       - gammastep
       - git
-      - go
       - gnome-themes-extra
       - gnu-free-fonts
       - grim
@@ -43,7 +42,6 @@
       - pass
       - pavucontrol
       - pdftk
-      - plan9port
       - podman
       - pulsemixer
       - python-pipx
@@ -58,9 +56,6 @@
       - hyprland
       - hyprlock
       - syncthing
-      - texlive-core
-      - texlive-langenglish
-      - texlive-langgerman
       - thunderbird
       - tmux
       - tree
