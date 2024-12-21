@@ -27,6 +27,7 @@
       - gnome-themes-extra
       - gnu-free-fonts
       - grim
+      - imv
       - jq
       - kanshi
       - man-db
@@ -55,12 +56,12 @@
       - hyprland
       - hyprlock
       - syncthing
+      - tesseract-data-deu
       - thunderbird
       - tmux
       - tree
       - ttf-joypixels
       - ttf-nerd-fonts-symbols
-      - syncthing
       - terminus-font
       - thunderbird
       - tmux
