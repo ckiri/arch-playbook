@@ -3,7 +3,7 @@
 
 main() {
   DIR="/home/${USER}/"
-  REQ_PACKAGES="python3 ansible git"
+  REQ_PACKAGES="archlinux-keyring python3 ansible git"
   
   cd $DIR
   
@@ -25,7 +25,7 @@ main() {
   [ -n "$(grep -E ".*VGA compatible controller:\s*[^:]+Intel.*" <<< $pci)" ] \
     && REQ_PACKAGES="${REQ_PACKAGES} vulkan-intel lib32-vulkan-intel"
   
-  sudo pacman -Syu --needed $REQ_PACKAGES
+  sudo pacman -Syu $REQ_PACKAGES
 
   # Run the ansible playbook
   git clone --depth=1 https://github.com/ckiri/arch-playbook
