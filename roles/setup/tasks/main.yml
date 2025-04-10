@@ -10,7 +10,7 @@
   become: true
   changed_when: false
 
-- name: Ensure needed directories exist.
+- name: Ensure necessary directories exist.
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
@@ -18,7 +18,7 @@
     - "~/.cache/weather"
     - "~/.cache/zsh"
 
-- name: Ensure needed files exist.
+- name: Ensure necessary files exist.
   ansible.builtin.file:
     path: "{{ item }}"
     state: touch
@@ -51,21 +51,11 @@
     chdir: "~/.dotfiles"
   loop:
     - alacritty
-    - code
-    - dirs
-    - emojipicker
-    - hypr
     - kanshi
-    - labwc
-    - runmenu
-    - dunst
     - fontconfig
-    - nvim
-    - openpdf
-    - passmenu
-    - timer
+    - scripts
+    - sway
+    - swaylock
     - tmux
-    - waybar
-    - wayshot
     - zathura
     - zsh
