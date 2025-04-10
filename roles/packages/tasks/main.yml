@@ -5,6 +5,10 @@
       - alacritty
       - alsa-utils
       - ansible
+      - arm-none-eabi-gcc
+      - avr-gcc
+      - avr-libc
+      - avr-gcc
       - base
       - base-devel
       - bind
@@ -13,12 +17,13 @@
       - bluez-utils
       - bridge-utils
       - brightnessctl
+      - chromium
       - cifs-utils
+      - code
       - ctags
       - cups
       - dnsmasq
       - dosfstools
-      - dunst
       - ffmpeg
       - firefox
       - fzf
@@ -27,21 +32,31 @@
       - gnome-themes-extra
       - gnu-free-fonts
       - grim
+      - gst-plugins-bad
+      - gst-plugins-ugly
       - imv
+      - inkscape
       - jq
       - kanshi
+      - kicad
+      - kicad-library
+      - luakit
+      - mako
       - man-db
       - minicom
       - mpv
-      - neovim
       - net-tools
       - nmap
+      - ollama
+      - openscad
       - openssh
       - pacman-contrib
+      - pandoc-cli
       - papirus-icon-theme
       - pass
       - pavucontrol
       - pdftk
+      - pipewire-pulse
       - podman
       - pulsemixer
       - python-pipx
@@ -52,23 +67,25 @@
       - slurp
       - sof-firmware
       - stow
-      - hypridle
-      - hyprland
-      - hyprlock
+      - sway
+      - swaybg
+      - swayidle
+      - swaylock
       - syncthing
       - tesseract-data-deu
       - thunderbird
+      - tlp
       - tmux
       - tree
+      - ttf-inconsolata
+      - ttf-inconsolata-nerd
       - ttf-joypixels
       - ttf-nerd-fonts-symbols
-      - terminus-font
-      - thunderbird
-      - tmux
-      - tree
       - unzip
+      - vim
       - virt-manager
-      - waybar
+      - w3m
+      - wev
       - wget
       - wireplumber
       - wl-clipboard
