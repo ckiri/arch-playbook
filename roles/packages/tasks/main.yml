@@ -47,6 +47,7 @@
       - mpv
       - net-tools
       - nmap
+      - noto-fonts-emoji
       - ollama
       - openscad
       - openssh
@@ -79,7 +80,6 @@
       - tree
       - ttf-inconsolata
       - ttf-inconsolata-nerd
-      - ttf-joypixels
       - ttf-nerd-fonts-symbols
       - unzip
       - vim
