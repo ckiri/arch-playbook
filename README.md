@@ -8,7 +8,8 @@ and ansible-playbook steps.
 
 What has to be available for it to work:
 - A fresh install of Arch Linux
-- `curl`
+- Curl
+- `$USER` must be part of `wheel` group
 
 ## Run Setup
 
