@@ -10,16 +10,18 @@ main() {
     
     # Install required packages 
     sudo pacman -Syu $REQ_PACKAGES
+    test $? -ne 0 && exit 1
 
     # Run the ansible playbook
     git clone --depth=1 https://github.com/ckiri/arch-playbook
     cd ./arch-playbook
     printf "Running the Ansible Playbook.\n"
     ansible-playbook -i inventory -K playbook.yml
+    test $? -ne 0 && exit 1
 
     # Cleanup
     cd $DIR
-    rm -r ./arch-playbook
+    sudo rm -r ./arch-playbook
 }
 
 main
