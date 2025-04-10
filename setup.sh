@@ -26,7 +26,7 @@ main() {
     test -n "$(grep -E ".*VGA compatible controller:\s*[^:]+Intel.*" < $pci)" \
         && REQ_PACKAGES="${REQ_PACKAGES} vulkan-intel lib32-vulkan-intel"
     
-    sudo pacman -Syu $REQ_PACKAGES
+    sudo pacman -Syu --confirm $REQ_PACKAGES
 
     # Run the ansible playbook
     git clone --depth=1 https://github.com/ckiri/arch-playbook
