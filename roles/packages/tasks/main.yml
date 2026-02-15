@@ -2,67 +2,90 @@
   become: yes
   pacman:
     name:
-      - alacritty
+      - aspell
+      - aspell-de
+      - aspell-en
+      - base
+      - base-devel
+      - bind
       - bluez
       - bluez-tools
       - bluez-utils
+      - bob
       - bridge-utils
       - brightnessctl
-      - chromium
       - cifs-utils
-      - code
+      - clang
+      - clinfo
+      - cloc
       - ctags
       - cups
-      - dnsmasq
       - ffmpeg
       - firefox
+      - foot
+      - fprintd
+      - fwupd
       - fzf
       - gammastep
-      - git
-      - gnome-themes-extra
       - gnu-free-fonts
       - grim
+      - gromit-mpx
+      - grub
+      - hplip
+      - imagemagick
+      - img2pdf
       - imv
+      - jq
       - kanshi
+      - lf
+      - libqalculate
+      - linux
+      - linux-firmware
       - mako
       - man-db
+      - man-pages
+      - minicom
+      - mpc
+      - mpd
       - mpv
-      - noto-fonts-emoji
+      - networkmanager
+      - nmap
+      - openresolv
       - openssh
-      - papirus-icon-theme
       - pass
       - pavucontrol
+      - pdftk
       - pipewire-pulse
       - pulsemixer
-      - qemu-base
-      - qt6-wayland
-      - ranger
+      - qemu-full
       - rsync
+      - scrcpy
       - slurp
       - sof-firmware
       - stow
       - sway
-      - swaybg
       - swayidle
       - swaylock
       - syncthing
-      - tesseract-data-deu
       - thunderbird
+      - tipp10
       - tmux
+      - translate-shell
       - tree
       - ttf-inconsolata
-      - ttf-inconsolata-nerd
-      - ttf-nerd-fonts-symbols
+      - ufw
       - unzip
-      - vim
-      - virt-manager
+      - vis
+      - w3m
       - wev
-      - wget
+      - wf-recorder
+      - wireguard-tools
       - wireplumber
       - wl-clipboard
+      - wl-mirror
       - wlr-randr
       - wmenu
-      - xdg-desktop-portal-wlr
+      - xdg-desktop-portal-gtk
       - xdg-user-dirs
       - xorg-xwayland
       - zathura
@@ -71,3 +94,4 @@
       - zip
       - zsh
     state: present
+

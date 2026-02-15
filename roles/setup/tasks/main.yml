@@ -1,4 +1,4 @@
-- name: Ensure dotfiles repository is cloned to home directory.
+- name: Ensure dotfiles are cloned to the home directory.
   ansible.builtin.git:
     repo: https://github.com/ckiri/dotfiles
     dest: "~/.dotfiles"
@@ -26,31 +26,12 @@
     - "~/.cache/weather/weather"
     - "~/.cache/zsh/history"
 
-- name: Ensure home directory is cleaned up.
-  ansible.builtin.file:
-    path: "{{ item }}"
-    state: absent
-  loop:
-    - "~/.bashrc"
-    - "~/.bash_history"
-    - "~/.bash_logout"
-    - "~/.ansible"
-    - "~/Documents"
-    - "~/Templates"
-    - "~/Desktop"
-    - "~/Downloads"
-    - "~/Videos"
-    - "~/Pictures"
-    - "~/.config/user-dirs.dirs"
-    - "~/Music"
-    - "~/Public"
-
 - name: Ensure symlinks are set.
   ansible.builtin.shell: "stow {{ item }}"
   args:
     chdir: "~/.dotfiles"
   loop:
-    - alacritty
+    - foot
     - kanshi
     - fontconfig
     - scripts
@@ -59,3 +40,9 @@
     - tmux
     - zathura
     - zsh
+
+- name: Deny everything and enable UFW
+  community.gerneral.ufw:
+    state: enabled
+    rule: allow
+    port: ssh
